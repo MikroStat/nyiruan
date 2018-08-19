@@ -1,6 +1,6 @@
 
 	function halimun(vKode, vMode) {
-		var cai    = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		var cai    = "a";
 		var sumput = "725ZepcrxR86F93Eifzq4TPsgL1dMVnKShmUQJoCOtWvYbXyk0NlaIAuwBDjGH";
 		var kodePanjang = vKode.length;
 		var kodeNew = "";
@@ -8,6 +8,18 @@
 		var Pos;
 		if (kodePanjang > 62) kodePanjang = 62;
 
+		// ngeusian cai
+		for (i=98; i < 123; i++) {
+			cai += String.fromCharCode(i);
+		}
+		for (i=65; i < 91; i++) {
+			cai += String.fromCharCode(i);
+		}
+		for (i=48; i < 58; i++) {
+			cai += String.fromCharCode(i);
+		}
+			
+			
 		// keur nyumputkeun
 		if(vMode == 7) {
 			for (i=0; i < kodePanjang; i++)
@@ -25,7 +37,7 @@
 					kodeNew += cai.charAt(Pos);
 				}		
 		}
-		return kodeNew;
+		return kodeNew.trim();
 	}
 
 	function validasi() {
