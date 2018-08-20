@@ -40,7 +40,7 @@
 		return kodeNew.trim();
 	}
 
-	function qValidasi() {
+	function validasi() {
 	    var tulak;
 		var nama = document.getElementById("iNama").value;
 		var hak = document.getElementById("iHak").value;
