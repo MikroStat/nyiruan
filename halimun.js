@@ -1,5 +1,5 @@
 
-	function halimun(vKode, vMode) {
+	function qHalimun(vKode, vMode) {
 		var cai    = "a";
 		var sumput = "725ZepcrxR86F93Eifzq4TPsgL1dMVnKShmUQJoCOtWvYbXyk0NlaIAuwBDjGH";
 		var kodePanjang = vKode.length;
@@ -40,7 +40,7 @@
 		return kodeNew.trim();
 	}
 
-	function validasi() {
+	function qValidasi() {
 	    var tulak;
 		var nama = document.getElementById("iNama").value;
 		var hak = document.getElementById("iHak").value;
@@ -50,7 +50,7 @@
 			return false;
 		}
 		if (nama != "" && hak !="" && kode !="") {
-			tulak = halimun(kode, hak);
+			tulak = qHalimun(kode, hak);
 			alert ("Hasilnya : " + tulak);
 			return true;
 		}else{
