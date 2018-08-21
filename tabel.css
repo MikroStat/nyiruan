@@ -28,8 +28,8 @@
 }
 
 .qRz tbody tr:nth-child(odd) 
-{ /* Make table like zebra */
-  background:#eee;
+   { /* Make table like zebra */
+   background:#eee;
 }
 
 
