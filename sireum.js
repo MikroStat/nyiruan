@@ -26,3 +26,17 @@ function callApi() {
       }, 1000);
    });
 }
+
+function qr(imgId) {
+   let imgUrl=document.getElementById(imgId).innerHTML;    
+   let imgPage = window.open("", "_blank", WinPopUpArea(.7));
+   // imgPage.document.write("<p>Loading....</p>");
+   callApi()
+      .then(function () {
+         // imgPage.location.href = imgUrl;
+         imgPage.document.write('<img src="' + imgUrl + '"width=400px"' + '"/>');
+      })
+      .catch(function () {
+         imgPage.close();
+      });
+}
