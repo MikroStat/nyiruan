@@ -6,7 +6,7 @@
 
 /* ===============  paragraf ==================== */
 /* catatan dalam posting */
-.qpbedug {
+.qbedug {
    color : gray;
    font-size : 80%;
    font-family:sans-serif;
@@ -19,6 +19,20 @@
 
 
 /* ===============  table ==================== */
+
+/* daftar referensi */
+.qtRef {
+    border : 0;
+    color : white;
+    background-color: white;
+    font-size: 1px;
+    line-height: 0.1;
+    letter-spacing: -2px;
+    text-decoration: none;
+    word-spacing: -2px;
+    white-space: nowrap;
+}
+
 /* CSS for Zebra Table in index.html */
 .qtzebra {
     width: 100%; 
