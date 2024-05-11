@@ -27,8 +27,16 @@ function callApi() {
    });
 }
 
+function qdriveUrl(imgId) {
+  let driveStart = 'https://drive.google.com/thumbnail?id=';
+  let idUrl=document.getElementById(imgId).innerHTML;
+  let imgUrl = driveStart + idUrl + '&sz=w1006';
+  return imgUrl;
+}
+
 function qr(imgId) {
-   let imgUrl=document.getElementById(imgId).innerHTML;    
+   // let imgUrl=document.getElementById(imgId).innerHTML; 
+   let imgUrl = qdriveUrl(imgId);
    let imgPage = window.open("", "_blank", WinPopUpArea(.7));
    // imgPage.document.write("<p>Loading....</p>");
    callApi()
