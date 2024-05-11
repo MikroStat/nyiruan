@@ -16,3 +16,13 @@ function WinPopUpArea(iRasioTiLayar){
 	
 	return kaTenjona;
 }
+
+/* ===============  window ==================== */
+/* mencegah browser memblok window */
+function callApi() {
+   return new Promise(function (resolve) {
+      setTimeout(function () {
+         resolve();
+      }, 1000);
+   });
+}
