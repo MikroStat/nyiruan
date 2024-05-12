@@ -34,7 +34,7 @@ function qdriveUrl(imgId) {
   return imgUrl;
 }
 
-function qr(imgId) {
+function qir(imgId) {
    // let imgUrl=document.getElementById(imgId).innerHTML; 
    let imgUrl = qdriveUrl(imgId);
    let imgPage = window.open("", "_blank", WinPopUpArea(.7));
