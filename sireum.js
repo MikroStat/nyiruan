@@ -48,3 +48,28 @@ function qir(imgId) {
          imgPage.close();
       });
 }
+
+function qive(imgId) {
+  let gambar = new Image(); 
+  gambar.src = 'https://drive.google.com/thumbnail?id=';
+  gambar.src += imgId;
+  gambar.src += '&sz=w1000';
+  var lokasiId = imgId.substring(0, 3);
+  // gambar.width = 200; 
+  // gambar.height = 200; 
+  // document.getElementById("demo").innerHTML = "YOU CLICKED ME!"; 
+  // alert(gambar.src);
+  document.getElementById(lokasiId).innerHTML = '<img src="' + gambar.src + '"width=400px"' + '" />'; 
+}
+  
+function qiv(imgDefId) {
+  let gambar = new Image(); 
+  gambar.src = qdriveUrl(imgDefId);
+  var lokasiId = '!' + imgDefId;
+  // gambar.width = 200; 
+  // gambar.height = 200; 
+  // document.getElementById("demo").innerHTML = "YOU CLICKED ME!"; 
+  // alert(gambar.src);
+  document.getElementById(lokasiId).innerHTML = '<img src="' + gambar.src + '"width=400px"' + '" />'; 
+}
+  
