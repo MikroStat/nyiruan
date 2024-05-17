@@ -17,6 +17,13 @@
    border-left: 2px solid #daa520; 
 }
 
+/* ==========  anchor/link/URL ============== */
+/* list/daftar link */
+.qad {
+  display: none;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
 
 /* ===============  table ==================== */
 
@@ -66,3 +73,4 @@
    /* Make table like zebra */
    background:#eee;
 }
+
