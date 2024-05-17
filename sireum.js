@@ -30,7 +30,7 @@ function callApi() {
 function qdriveUrl(imgId) {
   let driveStart = 'https://drive.google.com/thumbnail?id=';
   let idUrl=document.getElementById(imgId).innerHTML;
-  let imgUrl = driveStart + idUrl + '&sz=w1006';
+  let imgUrl = driveStart + idUrl + '&sz=w1000';
   return imgUrl;
 }
 
