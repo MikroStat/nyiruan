@@ -65,7 +65,7 @@ function qive(imgId) {
 function qiv(imgDefId) {
   let gambar = new Image(); 
   gambar.src = qdriveUrl(imgDefId);
-  var lokasiId = '!' + imgDefId;
+  var lokasiId = 'X' + imgDefId;
   // gambar.width = 200; 
   // gambar.height = 200; 
   // document.getElementById("demo").innerHTML = "YOU CLICKED ME!"; 
