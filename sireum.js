@@ -34,7 +34,7 @@ function qdriveUrl(imgId) {
   return imgUrl;
 }
 
-function qir(imgId) {
+function qip(imgId) {
    // let imgUrl=document.getElementById(imgId).innerHTML; 
    let imgUrl = qdriveUrl(imgId);
    let imgPage = window.open("", "_blank", WinPopUpArea(.7));
@@ -73,3 +73,18 @@ function qiv(imgDefId) {
   document.getElementById(lokasiId).innerHTML = '<img src="' + gambar.src + '"width=400px"' + '" />'; 
 }
   
+function qim() {
+  let jmlGbr = arguments.length;
+  let gambar = [];
+  let lokasi = [];
+
+
+  for (let i = 0; i < jmlGbr; i++) {
+    gambar[i] = new Image();
+    lokasi[i] = 'x' + arguments[i];
+
+    gambar[i].src = qdriveUrl(arguments[i]);
+    document.getElementById(lokasi[i]).innerHTML = '<img src="' + gambar[i].src + '"width=400px"' + '" />';
+  }
+
+}
