@@ -25,6 +25,22 @@
   /* visibility: hidden; */
 }
 
+.qpustaka {
+	text-indent: -2.0em;
+	/* margin-left: 2em; */
+	padding-left: 2em;
+	color: grey;
+	font-size: 90%;
+	line-height: 1.50;
+}
+.qpustaka hr {
+  	margin-top: 52px;
+	border-top: 4px solid rgb(245.245.245);
+	margin-left: -2.0em;
+	padding-left: 0px;
+	width:40%; 
+}  
+
 /* ===============  table ==================== */
 
 /* daftar referensi */
