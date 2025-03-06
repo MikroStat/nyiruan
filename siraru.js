@@ -1,5 +1,4 @@
-<script type='text/javascript'>
-//<![CDATA[ 	
+
 function pustaka(){
 	let cttInp = document.getElementById("sitasi").value;
 	let urlInp = document.getElementById("alamat").value;
@@ -52,5 +51,3 @@ function pustaka(){
 		document.getElementById("alamatView").innerHTML = codeURL; 
 }
 	
-//]]> 
-</script>
