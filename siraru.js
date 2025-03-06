@@ -1,5 +1,5 @@
 
-function pustaka(){
+function daftarPustaka(){
 	let cttInp = document.getElementById("sitasi").value;
 	let urlInp = document.getElementById("alamat").value;
 	// panjang sitasi
