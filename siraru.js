@@ -51,3 +51,38 @@ function daftarPustaka(){
 		document.getElementById("alamatView").innerHTML = codeURL; 
 }
 	
+function getJudulDiSitasi(idEnt) {
+
+	let titikMulai = idEnt.indexOf(')', 0) + 2;
+	let titikAkhir = idEnt.indexOf('.', 0);
+	let judulLengkap = idEnt.substring(titikMulai, titikAkhir);
+	let judul = ['', '', ''];
+	let judulSplit = [];	
+	let jmlKodeTema = 0;
+	const buttonTutup = '&lt;/button&gt;';
+		
+	let flag = 0;
+	flag = judulLengkap.includes("~");
+	if (flag) {
+		judulSplit = judulLengkap.split('~');
+		jmlKodeTema = (judulLengkap.match(/~/g)).length;
+	}
+	
+	switch(jmlKodeTema) {
+		case 1: 
+			judul[1] = judulSplit[0] + buttonTutup;
+			judul[2] = judulSplit[1];
+			break;
+		
+		case 2: 
+			judul = judulSplit;
+			judul[1] += buttonTutup;
+			break;
+			
+		default :
+			judul[1] = judulLengkap;
+			judul[2] = buttonTutup;
+	}
+	
+	return judul;
+}
