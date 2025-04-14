@@ -50,7 +50,21 @@ function daftarPustaka(){
 	   document.getElementById("namaView").innerHTML = cttLengkap; 
 		document.getElementById("alamatView").innerHTML = codeURL; 
 }
+
+function getNamaBaniDiSitasi(idEnt) {
+	let penulis = getNamaPenulisDiSitasi(idEnt);
+	let bani = penulis;
+	let bukan = -1;
 	
+	// deteksi nama penulis tunggal
+	let tunggal = idEnt.indexOf(',');
+	if (tunggal != bukan) {
+		bani = penulis.substr(0, tunggal);
+	}
+	
+	return bani; 	  
+}
+
 function getJudulDiSitasi(idEnt) {
 
 	let titikMulai = idEnt.indexOf(')', 0) + 2;
