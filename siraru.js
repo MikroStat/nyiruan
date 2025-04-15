@@ -68,7 +68,7 @@ function getNamaBaniDiSitasi(idEnt) {
 function getJudulDiSitasi(idEnt) {
 
 	let titikMulai = idEnt.indexOf(')', 0) + 2;
-	let titikAkhir = idEnt.indexOf('.', 0);
+	let titikAkhir = idEnt.indexOf('.', titikMulai);
 	let judulLengkap = idEnt.substring(titikMulai, titikAkhir);
 	let judul = ['', '', ''];
 	let judulSplit = [];	
