@@ -226,3 +226,16 @@ function eBookPdf (baniInp, tahunInp, judul0, judul1, judul2) {
 	
 	return baniInp + ' (' + tahunInp + ') ' + judul;
 }
+
+async function copySitasiKeCb(idEnt) {
+  let teks = document.getElementById(idEnt).innerHTML;
+	
+  // ganti semua karakter kode h.tml
+  teks = teks.replace(/&lt;/g, "<");  
+  teks = teks.replace(/&gt;/g, ">");
+  teks = teks.replace(/&apos;/g, "\'");
+  teks = teks.replace(/&quot;/g, "\"");
+  teks = teks.replace(/&nbsp;/g, " ");
+  
+  await navigator.clipboard.writeText(teks);
+}
