@@ -116,11 +116,11 @@ function demiMasa(adj) {
 	let pasaranIx = (kaping % 5);
   	let pasaran = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'];
 	let sasih = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-					'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
+		'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
 	let dHijriyah = hCalender(adj);
 	
 	let waktos = dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + 
-			kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '&nbsp;&nbsp;( ' + dHijriyah + ' )';
+		kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '&nbsp;&nbsp;( ' + dHijriyah + ' )';
 	
    document.getElementById('walAshri').innerHTML = waktos; 
 
