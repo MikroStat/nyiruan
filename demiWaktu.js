@@ -1,4 +1,3 @@
-
 function gmod(n,m){
 	return ((n%m)+m)%m;
 }
