@@ -89,9 +89,9 @@ function hijriyahCalender(adjust){
 }
 function hCalender(adjustment) {
 	const wdNames = new Array("Ahad","Ithnin","Thulatha","Arbaa","Khams","Jumuah","Sabt");
-	const iMonthNames = new Array('Muharram','Shafar','Rabi\'ul Ula','Rabi\'ul Tsani',
-	'Jumadal Ula','Jumadal Tsaniyah','Rajab','Sya\'ban',
-	'Ramadhan','Syawwal','Dzulqo\'dah','Dzulhijjah');
+	const iMonthNames = new Array('Muharram','Shafar','Rabi\'ul Awwal','Rabi\'uts Tsani',
+	'Jumadil Awwal','Jumadil Akhir','Rajab','Sya\'ban',
+	'Ramadhan','Syawwal','Dzulqai\'dah','Dzulhijjah');
 	let iDate = hijriyahCalender(adjustment);
 	// var outputIslamicDate = wdNames[iDate[4]] + ", " 
 	// + iDate[5] + " " + iMonthNames[iDate[6]] + " " + iDate[7] + " H";
@@ -102,6 +102,11 @@ function hCalender(adjustment) {
 	return outputIslamicDate;
 	
 	//   document.getElementById('demo').innerHTML = outputIslamicDate; 
+}
+
+function demiMasaPj(dinten, pasaran, kaping, sasih, tahun) {
+	let masaPj = dinten.concat(pasaran, kaping, sasih, tahun);
+	return masaPj.length;
 }
 
 function demiMasa(adj) {
@@ -118,10 +123,29 @@ function demiMasa(adj) {
 	let sasih = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
 		'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
 	let dHijriyah = hCalender(adj);
+	let mSty = '<span style=\"text-decoration: underline; text-underline-offset: 4px;\">';
 	
-	let waktos = dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + 
-		kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '&nbsp;&nbsp;( ' + dHijriyah + ' )';
+	let masehi = mSty + dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + 
+		kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '</span>&nbsp;';	
+	let masaPj = demiMasaPj(dinten[dintenIx], pasaran[pasaranIx], kaping, sasih[sasihIx], tahun);				
+
+	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
+	let spsMisteri = 32;
 	
-   document.getElementById('walAshri').innerHTML = waktos; 
+	let waktosPos = Math.round(screen.width - 16 * masaPj + spsMisteri) + 'px;';	
+	let waktosTenjo = '<p style=\"' +
+		'color: black;' +
+		'text-align: right;' +
+		'margin-left: ' + waktosPos + 
+		'background-color: #f0f0f0;' +
+		'font-family: ' + '\'Roboto Mono\';' +
+		'font-size: small;' +
+		'font-weight: bold;' +
+		'opacity: 0.7;' +
+		'margin-bottom: 64x;' +
+		'\">&nbsp;';
+
+	
+   document.getElementById('walAshri').innerHTML = waktosTenjo + waktos + '&nbsp;</p>'; 
 
 }
