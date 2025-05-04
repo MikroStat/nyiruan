@@ -130,21 +130,9 @@ function demiMasa(adj) {
 	let masaPj = demiMasaPj(dinten[dintenIx], pasaran[pasaranIx], kaping, sasih[sasihIx], tahun);				
 
 	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
-	let spsMisteri = 32;
-	
-	let waktosPos = Math.round(screen.width - 16 * masaPj + spsMisteri);	
-	let waktosTenjo = '<p style=\"' +
-		'color: black;' +
-		'text-align: right;' +
-		'margin-left: ' + waktosPos + 'px;' + 
-		'background-color: #f0f0f0;' +
-		'font-family: ' + '\'Roboto Mono\';' +
-		'font-size: small;' +
-		'font-weight: bold;' +
-		'opacity: 0.7;' +
-		'margin-bottom: 64x;' +
-		'\">&nbsp;';
 
-   document.getElementById('walAshri').innerHTML = waktosTenjo + waktos + '&nbsp;</p>'; 
+
+
+   document.getElementById('walAshri').innerHTML = waktos; 
 
 }
