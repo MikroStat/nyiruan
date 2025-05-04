@@ -131,8 +131,5 @@ function demiMasa(adj) {
 
 	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
 
-
-
    document.getElementById('walAshri').innerHTML = waktos; 
-
 }
