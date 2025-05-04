@@ -135,7 +135,7 @@ function demiMasa(adj) {
 	let waktosPos = Math.round(screen.width/2) + 'px;';	
 	let waktosTenjo = '<p style=\"' +
 		'color: black;' +
-		'text-align: right;' +
+		'text-align: left;' +
 		'background-color: #f0f0f0;' +
 		'font-family: ' + '\'Roboto Mono\';' +
 		'font-size: small;' +
