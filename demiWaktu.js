@@ -132,7 +132,7 @@ function demiMasa(adj) {
 	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
 	let spsMisteri = 128;
 	
-	let waktosPos = Math.round(screen.width - 16 * masaPj + spsMisteri) + 'px;';	
+	let waktosPos = Math.round(screen.width/2) + 'px;';	
 	let waktosTenjo = '<p style=\"' +
 		'color: black;' +
 		'text-align: right;' +
