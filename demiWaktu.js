@@ -130,7 +130,7 @@ function demiMasa(adj) {
 	let masaPj = demiMasaPj(dinten[dintenIx], pasaran[pasaranIx], kaping, sasih[sasihIx], tahun);				
 
 	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
-	let spsMisteri = 32;
+	let spsMisteri = 128;
 	
 	let waktosPos = Math.round(screen.width - 16 * masaPj + spsMisteri) + 'px;';	
 	let waktosTenjo = '<p style=\"' +
