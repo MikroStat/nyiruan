@@ -126,16 +126,17 @@ function demiMasa(adj) {
 	let mSty = '<span style=\"text-decoration: underline; text-underline-offset: 4px;\">';
 	
 	let masehi = mSty + dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + 
-		kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '</span>&nbsp;';	
+					kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '</span>&nbsp;';	
 	let masaPj = demiMasaPj(dinten[dintenIx], pasaran[pasaranIx], kaping, sasih[sasihIx], tahun);				
 
 	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
-	let spsMisteri = 128;
+	let spsMisteri = 32;
 	
-	let waktosPos = Math.round(screen.width/2) + 'px;';	
+	let waktosPos = Math.round(screen.width - 16 * masaPj + spsMisteri);	
 	let waktosTenjo = '<p style=\"' +
 		'color: black;' +
-		'text-align: left;' +
+		'text-align: right;' +
+		'margin-left: ' + waktosPos + 'px;' + 
 		'background-color: #f0f0f0;' +
 		'font-family: ' + '\'Roboto Mono\';' +
 		'font-size: small;' +
@@ -144,7 +145,6 @@ function demiMasa(adj) {
 		'margin-bottom: 64x;' +
 		'\">&nbsp;';
 
-	
    document.getElementById('walAshri').innerHTML = waktosTenjo + waktos + '&nbsp;</p>'; 
 
 }
