@@ -1,3 +1,5 @@
+// sumber : al-habib.info,
+// dengan beberapa modifikasi
 function gmod(n,m){
 	return ((n%m)+m)%m;
 }
@@ -100,13 +102,8 @@ function hCalender(adjustment) {
 	
 	return outputIslamicDate;
 	
-	//   document.getElementById('demo').innerHTML = outputIslamicDate; 
 }
 
-function demiMasaPj(dinten, pasaran, kaping, sasih, tahun) {
-	let masaPj = dinten.concat(pasaran, kaping, sasih, tahun);
-	return masaPj.length;
-}
 
 function demiMasa(adj) {
 
@@ -120,15 +117,14 @@ function demiMasa(adj) {
 	let pasaranIx = (kaping % 5);
   	let pasaran = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'];
 	let sasih = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-		'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
+					'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
 	let dHijriyah = hCalender(adj);
-	let mSty = '<span style=\"text-decoration: underline; text-underline-offset: 4px;\">';
+
+	let mSty = '<p style="text-align: right; line-height: 1.4; background-color: #f4f4f4; font-size: small; font-weight: bold; opacity: 0.7; font-family: Roboto Mono; margin-bottom: 64px;">';
 	
-	let masehi = mSty + dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + 
-					kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '</span>&nbsp;';	
-	let masaPj = demiMasaPj(dinten[dintenIx], pasaran[pasaranIx], kaping, sasih[sasihIx], tahun);				
-
-	let waktos = masehi + '<br/>&nbsp;' + dHijriyah;
-
+	let masehi = mSty + '<u>' + dinten[dintenIx] + ' ' + pasaran[pasaranIx] + ', ' + kaping + ' ' + sasih[sasihIx] + ' ' + tahun + '</u>&nbsp;';
+	let waktos = masehi + '<br/>' + dHijriyah + '&nbsp;</p>';
+	
    document.getElementById('walAshri').innerHTML = waktos; 
+	
 }
