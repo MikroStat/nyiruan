@@ -1,5 +1,6 @@
 // sumber : al-habib.info,
 // dengan beberapa modifikasi
+
 function gmod(n,m){
 	return ((n%m)+m)%m;
 }
