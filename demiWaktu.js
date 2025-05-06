@@ -89,6 +89,7 @@ function hijriyahCalender(adjust){
 
 	return myRes;
 }
+
 function hCalender(adjustment) {
 	const wdNames = new Array("Ahad","Ithnin","Thulatha","Arbaa","Khams","Jumuah","Sabt");
 	const iMonthNames = new Array('Muharram','Shafar','Rabi\'ul Awwal','Rabi\'uts Tsani',
@@ -102,7 +103,6 @@ function hCalender(adjustment) {
 	let outputIslamicDate =  iDate[5] + " " + iMonthNames[iDate[6]] + " " + iDate[7] + " H";
 	
 	return outputIslamicDate;
-	
 }
 
 
