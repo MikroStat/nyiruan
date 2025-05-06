@@ -63,7 +63,6 @@ function hijriyahCalender(adjust){
 	let iyear = 10631./30.;
 	let epochastro = 1948084;
 	let epochcivil = 1948085;
-
 	let shift1 = 8.01/60.;
 	
 	let z = jd-epochastro;
