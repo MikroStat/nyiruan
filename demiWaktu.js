@@ -105,7 +105,7 @@ function hCalender(adjustment) {
 }
 
 
-function demiMasa(adj) {
+function demiMasa() {
 
 	const d = new Date();
 	let kaping = d.getDate();
@@ -118,7 +118,7 @@ function demiMasa(adj) {
   	let pasaran = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'];
 	let sasih = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
 					'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
-	let dHijriyah = hCalender(adj);
+	let dHijriyah = hCalender(pDemiMasaAdj);
 
 	let mSty = '<p style="text-align: right; line-height: 1.4; background-color: #f4f4f4; font-size: small; font-weight: bold; opacity: 0.7; font-family: Roboto Mono; margin-bottom: 64px;">';
 	
