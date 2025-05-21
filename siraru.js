@@ -239,3 +239,32 @@ async function copySitasiKeCb(idEnt) {
   
   await navigator.clipboard.writeText(teks);
 }
+
+// merubah url asli dropBox menjadi format short kode
+<!-- https://dl.dropboxusercontent.com/scl/fi/346qg04q4o2v1aa7c08zj/Nafaa.png?rlkey=j7yw8mfduo1my2606x8va0z3n&st=1iqdflrk&dl=0 --> 
+<!--       titik point                       a                     b         c                               d           e -->
+function dbSusunKode() {
+	let urlInp = document.getElementById("alamat").value;
+	let desInp = document.getElementById("desc").value;
+	// let urlInp = document.getElementsByTagName("rp")[0].innerHTML;
+	const brand  = 'https://dl.dropboxusercontent.com/scl/fi/';
+	const a=41, b=62;
+	let   c = urlInp.indexOf("?rlkey"),
+		   d = urlInp.indexOf('st=')-1, // simbol & diabaikan
+		   e = urlInp.indexOf('dl=')-1;
+
+	const folder = urlInp.substring(a, b),
+	      file   = urlInp.substring(b+1, c-4), // tanpa ekstensi
+	      rlKey  = urlInp.substring(c+7, d),
+	      status = urlInp.substring(d+4, e);
+			
+	d = '|';
+	e = '&lt;rp id=\"' + idSapasi(file) +
+	    folder + d + rlKey + d + status +
+		 '/' + desInp +
+		 '&lt;/rp&gt;';
+	  
+	//return e;
+	document.getElementById('tenjo').innerHTML = e;
+}
+
