@@ -73,7 +73,7 @@ function qUrlPilahKode(idEnt) {
 
 function qsetIdCodeForDirectLink(idEnt) {
     let idInp = qUrlPilahKode(idEnt);
-    let tandapemisah = ' ';
+    let tandapemisah = '|';
 	// hanya untuk kerapian
 	let kodeKuota = 14;
 	let kodeBukuPj = idInp[1].length;
@@ -238,6 +238,36 @@ async function copySitasiKeCb(idEnt) {
   teks = teks.replace(/&nbsp;/g, " ");
   
   await navigator.clipboard.writeText(teks);
+}
+
+function spDeui(jml){
+	let sp = '';
+	for (let i = 0; i < jml; i++) {
+		sp += '&nbsp;';
+	}
+	return sp;	
+}
+
+// nomenklatur iD supaya rapi
+function idSapasi(inpId) {
+	const pj = inpId.length;
+	const idMax = 14,
+		  codeNol = 48,
+		  codeSembilan = 57;
+			
+	let sp = '';
+	if (pj <= idMax) sp = inpId + '\"' + spDeui(idMax-pj);
+		
+	// jika sebuah sitasi
+	if (pj > idMax) {
+		const chEnd = inpId.charCodeAt(pj-1);
+		if (chEnd >= codeNol & chEnd <= codeSembilan) {
+			const namaPenggal = inpId.substr(0, idMax-4);
+			sp = namaPenggal + inpId.substr(pj-4, 4) + '\"';	
+		}
+	}	
+	sp += '>';
+	return sp;
 }
 
 // merubah url asli dropBox menjadi format short kode
