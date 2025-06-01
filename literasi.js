@@ -42,7 +42,7 @@ function getNamaBaniDiSitasi(e) { // metaId
 }
 
 function qKodeBukuStd(e){ // metaId 
-  const m = 14,       // jumlah maksimal kode buku
+  const m = 12,       // jumlah maksimal kode buku
   // cek char terakhir (angka atau huruf)
         j = e.length; // jumlah kode buku
   let   y = 4;        // jumlah kode tahun (bisa 5)
