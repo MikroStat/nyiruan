@@ -1,0 +1,8 @@
+:root {
+  --kelirBedug: #f4f4f4; /* RGB(146, 168, 209) Hex #92A8D1 Serenity */
+  --tenjoBedug: RGB(0, 155, 119); /* Hex #009B77 emerald */
+  --tenjoKlik: red; /* WA #00C853  asli #25a186 ada di Grup Description=body */
+  --ukuranBedug: 80%;
+  --spBedug: 1.2;
+  --jamparing: &#39;   \2BC8&#39;  /* 2BC8 2BC6   2630 trigram */
+}
